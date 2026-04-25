@@ -1,0 +1,436 @@
+const programme = {
+  "Day 1": {
+    title: "Full Body Push + Shoulders",
+    focus: "Shoulder priority with controlled pressing and triceps work.",
+    time_tip: "Superset lateral raises with rope pushdowns.",
+    exercises: [
+      { name: "Back Squat", sets: 2, repMin: 6, repMax: 8, effort: "1–2 RIR", increment: 2.5 },
+      { name: "Incline Dumbbell Press", sets: 2, repMin: 8, repMax: 10, effort: "1 RIR", increment: 2 },
+      { name: "Seated Dumbbell Shoulder Press", sets: 2, repMin: 6, repMax: 10, effort: "1 RIR", increment: 2 },
+      { name: "Romanian Deadlift", sets: 2, repMin: 8, repMax: 10, effort: "1–2 RIR", increment: 2.5 },
+      { name: "Cable Lateral Raise", sets: 2, repMin: 12, repMax: 20, effort: "0–1 RIR", increment: 1 },
+      { name: "Rope Tricep Pushdown", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 2.5 }
+    ]
+  },
+  "Day 2": {
+    title: "Full Body Pull + Biceps",
+    focus: "Back work plus biceps from different angles.",
+    time_tip: "Superset rear delts with curls.",
+    exercises: [
+      { name: "Trap Bar Deadlift or Deadlift", sets: 2, repMin: 4, repMax: 6, effort: "1–2 RIR", increment: 2.5 },
+      { name: "Pull-Ups or Lat Pulldown", sets: 2, repMin: 8, repMax: 10, effort: "1 RIR", increment: 2.5 },
+      { name: "Chest-Supported Row", sets: 2, repMin: 8, repMax: 12, effort: "1 RIR", increment: 2.5 },
+      { name: "Bulgarian Split Squat", sets: 2, repMin: 8, repMax: 10, effort: "1–2 RIR", increment: 2 },
+      { name: "Rear Delt Cable Fly", sets: 2, repMin: 12, repMax: 20, effort: "0–1 RIR", increment: 1 },
+      { name: "Incline Dumbbell Curl", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 1 },
+      { name: "Hammer Curl", sets: 1, repMin: 12, repMax: 15, effort: "0–1 RIR", increment: 1 }
+    ]
+  },
+  "Day 3": {
+    title: "Full Body Legs + Delts",
+    focus: "Legs, pressing, pulling, and extra delt volume.",
+    time_tip: "Superset lateral raises with cable crunches.",
+    exercises: [
+      { name: "Leg Press", sets: 2, repMin: 8, repMax: 12, effort: "1 RIR", increment: 5 },
+      { name: "Dumbbell Bench Press", sets: 2, repMin: 8, repMax: 10, effort: "1 RIR", increment: 2 },
+      { name: "Seated Cable Row", sets: 2, repMin: 10, repMax: 12, effort: "1 RIR", increment: 2.5 },
+      { name: "Lying or Seated Leg Curl", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 2.5 },
+      { name: "Machine Shoulder Press", sets: 2, repMin: 8, repMax: 12, effort: "0–1 RIR", increment: 2.5 },
+      { name: "Dumbbell Lateral Raise", sets: 2, repMin: 12, repMax: 20, effort: "0–1 RIR", increment: 1 },
+      { name: "Cable Crunch", sets: 2, repMin: 10, repMax: 15, effort: "1 RIR", increment: 2.5 }
+    ]
+  },
+  "Day 4": {
+    title: "Full Body Upper + Arms",
+    focus: "Heavier upper session with direct arm emphasis.",
+    time_tip: "Superset preacher curls with overhead tricep extensions.",
+    exercises: [
+      { name: "Hack Squat or Front Squat", sets: 2, repMin: 6, repMax: 10, effort: "1–2 RIR", increment: 2.5 },
+      { name: "Flat Barbell Bench Press", sets: 2, repMin: 6, repMax: 8, effort: "1 RIR", increment: 2.5 },
+      { name: "T-Bar Row or Barbell Row", sets: 2, repMin: 8, repMax: 10, effort: "1 RIR", increment: 2.5 },
+      { name: "Hip Thrust", sets: 2, repMin: 8, repMax: 12, effort: "1 RIR", increment: 5 },
+      { name: "Arnold Press", sets: 2, repMin: 8, repMax: 10, effort: "0–1 RIR", increment: 2 },
+      { name: "Preacher Curl", sets: 2, repMin: 8, repMax: 12, effort: "0–1 RIR", increment: 1 },
+      { name: "Overhead Cable Tricep Extension", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 2.5 }
+    ]
+  },
+  "Day 5": {
+    title: "Full Body Pump + Arms and Shoulders",
+    focus: "Hypertrophy pump day with shoulders and arms brought forward.",
+    time_tip: "Superset cable curls with rope pushdowns. Pair lateral raises with reverse pec deck if gym layout allows.",
+    exercises: [
+      { name: "Goblet Squat or Hack Squat", sets: 2, repMin: 10, repMax: 15, effort: "1 RIR", increment: 2.5 },
+      { name: "Lat Pulldown", sets: 2, repMin: 10, repMax: 12, effort: "1 RIR", increment: 2.5 },
+      { name: "Incline Machine Press", sets: 2, repMin: 10, repMax: 12, effort: "1 RIR", increment: 2.5 },
+      { name: "Dumbbell Romanian Deadlift", sets: 2, repMin: 10, repMax: 12, effort: "1 RIR", increment: 2 },
+      { name: "Seated Lateral Raise", sets: 2, repMin: 15, repMax: 25, effort: "0–1 RIR", increment: 1 },
+      { name: "Reverse Pec Deck", sets: 2, repMin: 15, repMax: 20, effort: "0–1 RIR", increment: 2.5 },
+      { name: "Cable Curl", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 1 },
+      { name: "Rope Pushdown", sets: 2, repMin: 10, repMax: 15, effort: "0–1 RIR", increment: 2.5 }
+    ]
+  }
+};
+
+let currentDay = "Day 1";
+
+const tabs = document.getElementById("tabs");
+const content = document.getElementById("content");
+
+function getCurrentWeekId() {
+  const now = new Date();
+  const firstJan = new Date(now.getFullYear(), 0, 1);
+  const days = Math.floor((now - firstJan) / 86400000);
+  const week = Math.ceil((days + firstJan.getDay() + 1) / 7);
+  return `${now.getFullYear()}-W${String(week).padStart(2, "0")}`;
+}
+
+let currentWeek = localStorage.getItem("currentWeek") || getCurrentWeekId();
+
+function logKey(day, exerciseName) {
+  return `log-${currentWeek}-${day}-${exerciseName}`;
+}
+
+function getLog(day, exerciseName) {
+  const saved = localStorage.getItem(logKey(day, exerciseName));
+  if (!saved) return { weight: "", reps: [], notes: "", done: false };
+
+  try {
+    return JSON.parse(saved);
+  } catch {
+    return { weight: "", reps: [], notes: "", done: false };
+  }
+}
+
+function saveLog(day, exerciseName, data) {
+  localStorage.setItem(logKey(day, exerciseName), JSON.stringify(data));
+}
+
+function getRecommendation(exercise, log) {
+  const reps = log.reps
+    .map(rep => Number(rep))
+    .filter(rep => !Number.isNaN(rep));
+
+  if (!log.weight || reps.length < exercise.sets) {
+    return "Log weight and reps";
+  }
+
+  const hitTopRange = reps.every(rep => rep >= exercise.repMax);
+
+  if (hitTopRange) {
+    return `Increase by ${exercise.increment}kg next time`;
+  }
+
+  const hitMinimum = reps.every(rep => rep >= exercise.repMin);
+
+  if (hitMinimum) {
+    return "Keep weight. Aim for more reps";
+  }
+
+  return "Keep weight. Build back into range";
+}
+
+function renderTabs() {
+  tabs.innerHTML = Object.keys(programme).map(day => `
+    <button class="tab ${day === currentDay ? "active" : ""}" onclick="selectDay('${day}')">${day}</button>
+  `).join("");
+}
+
+function renderWeekSelector() {
+  return `
+    <section class="card week-card">
+      <label for="weekInput"><strong>Training week</strong></label>
+      <div class="week-row">
+        <input id="weekInput" value="${escapeHtml(currentWeek)}" onchange="changeWeek(this.value)" />
+        <button onclick="setThisWeek()">Use this week</button>
+      </div>
+      <p class="mini">Tip: use labels like 2026-W17, Week 1, Block 1 Week 1, or anything that makes sense to you.</p>
+    </section>
+  `;
+}
+
+function renderDay() {
+  const d = programme[currentDay];
+
+  content.innerHTML = `
+    ${renderWeekSelector()}
+
+    <section class="card">
+      <div class="day-head">
+        <div>
+          <h2>${currentDay}: ${d.title}</h2>
+          <p class="focus">${d.focus}</p>
+        </div>
+        <span class="pill">45–60 mins</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Done</th>
+              <th>Exercise</th>
+              <th>Target</th>
+              <th>Weight</th>
+              <th>Reps</th>
+              <th>Notes</th>
+              <th>Next time</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${d.exercises.map((ex, i) => renderExerciseRow(ex, i)).join("")}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note"><strong>Time tip:</strong> ${d.time_tip}</div>
+    </section>
+
+    ${renderProgressionSummary()}
+
+    <section class="grid">
+      <div class="card info">
+        <h3>Method</h3>
+        <ul>
+          <li>Compounds: stop at 1–2 reps in reserve.</li>
+          <li>Machines, cables and isolation: 0–1 reps in reserve.</li>
+          <li>Final isolation set can occasionally reach technical failure.</li>
+          <li>Failure means no more clean reps, not form goblin chaos.</li>
+        </ul>
+      </div>
+
+      <div class="card info">
+        <h3>Progression</h3>
+        <p>When you hit the top of the rep range on all working sets with clean form, increase the weight next time.</p>
+        <p>For lateral raises, curls and pushdowns, add reps before weight.</p>
+      </div>
+    </section>
+
+    <section class="card info">
+      <h3>Warm-up</h3>
+      <p>Keep it short: 5 minutes light cardio, 1–2 mobility drills, then 2–3 ramp-up sets before your first big lift.</p>
+    </section>
+
+    <section class="grid">
+      <button class="reset" onclick="resetDay()">Reset this day</button>
+      <button class="reset" onclick="exportData()">Export backup</button>
+    </section>
+  `;
+}
+
+function renderExerciseRow(ex, i) {
+  const log = getLog(currentDay, ex.name);
+  const recommendation = getRecommendation(ex, log);
+
+  const repInputs = Array.from({ length: ex.sets }).map((_, setIndex) => `
+    <input
+      class="small-input"
+      type="number"
+      inputmode="numeric"
+      placeholder="S${setIndex + 1}"
+      value="${escapeHtml(log.reps?.[setIndex] || "")}"
+      onchange="updateExercise('${currentDay}', '${escapeForJs(ex.name)}', 'rep-${setIndex}', this.value)"
+    />
+  `).join("");
+
+  return `
+    <tr>
+      <td>
+        <input
+          class="check"
+          type="checkbox"
+          ${log.done ? "checked" : ""}
+          onchange="updateExercise('${currentDay}', '${escapeForJs(ex.name)}', 'done', this.checked)"
+        />
+      </td>
+
+      <td>
+        <strong>${ex.name}</strong><br>
+        <span class="subtle">${ex.effort}</span>
+      </td>
+
+      <td>${ex.sets} x ${ex.repMin}–${ex.repMax}</td>
+
+      <td>
+        <input
+          class="weight-input"
+          type="number"
+          inputmode="decimal"
+          placeholder="kg"
+          value="${escapeHtml(log.weight || "")}"
+          onchange="updateExercise('${currentDay}', '${escapeForJs(ex.name)}', 'weight', this.value)"
+        />
+      </td>
+
+      <td>
+        <div class="rep-inputs">${repInputs}</div>
+      </td>
+
+      <td>
+        <input
+          class="notes-input"
+          type="text"
+          placeholder="Optional"
+          value="${escapeHtml(log.notes || "")}"
+          onchange="updateExercise('${currentDay}', '${escapeForJs(ex.name)}', 'notes', this.value)"
+        />
+      </td>
+
+      <td>
+        <span class="recommendation">${recommendation}</span>
+      </td>
+    </tr>
+  `;
+}
+
+function renderProgressionSummary() {
+  const d = programme[currentDay];
+
+  const ready = d.exercises.filter(ex => {
+    const log = getLog(currentDay, ex.name);
+    return getRecommendation(ex, log).startsWith("Increase");
+  });
+
+  const logged = d.exercises.filter(ex => {
+    const log = getLog(currentDay, ex.name);
+    return log.weight || log.reps?.some(Boolean);
+  });
+
+  return `
+    <section class="card info">
+      <h3>Progression summary</h3>
+      <p>${logged.length} of ${d.exercises.length} exercises logged for ${escapeHtml(currentWeek)}.</p>
+      ${
+        ready.length
+          ? `<p><strong>Ready to increase next time:</strong> ${ready.map(ex => ex.name).join(", ")}.</p>`
+          : `<p>No increases suggested yet. Keep collecting reps, little spreadsheet goblin.</p>`
+      }
+    </section>
+  `;
+}
+
+function updateExercise(day, exerciseName, field, value) {
+  const cleanName = unescapeForJs(exerciseName);
+  const log = getLog(day, cleanName);
+
+  if (field === "weight") {
+    log.weight = value;
+  } else if (field.startsWith("rep-")) {
+    const index = Number(field.split("-")[1]);
+    log.reps = log.reps || [];
+    log.reps[index] = value;
+  } else if (field === "notes") {
+    log.notes = value;
+  } else if (field === "done") {
+    log.done = value;
+  }
+
+  saveLog(day, cleanName, log);
+  renderDay();
+}
+
+function selectDay(day) {
+  currentDay = day;
+  renderTabs();
+  renderDay();
+}
+
+function changeWeek(value) {
+  currentWeek = value || getCurrentWeekId();
+  localStorage.setItem("currentWeek", currentWeek);
+  renderDay();
+}
+
+function setThisWeek() {
+  currentWeek = getCurrentWeekId();
+  localStorage.setItem("currentWeek", currentWeek);
+  renderDay();
+}
+
+function resetDay() {
+  if (!confirm(`Reset all logs for ${currentDay} in ${currentWeek}?`)) return;
+
+  programme[currentDay].exercises.forEach(ex => {
+    localStorage.removeItem(logKey(currentDay, ex.name));
+  });
+
+  renderDay();
+}
+
+function exportData() {
+  const data = {};
+
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith("log-") || key === "currentWeek") {
+      data[key] = localStorage.getItem(key);
+    }
+  });
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `workout-backup-${currentWeek}.json`;
+  link.click();
+
+  URL.revokeObjectURL(url);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+function escapeForJs(value) {
+  return String(value)
+    .replaceAll("\\", "\\\\")
+    .replaceAll("'", "\\'");
+}
+
+function unescapeForJs(value) {
+  return String(value)
+    .replaceAll("\\'", "'")
+    .replaceAll("\\\\", "\\");
+}
+
+let timerInterval = null;
+let seconds = 90;
+
+function setTimer(s) {
+  seconds = s;
+  updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  document.getElementById("timerDisplay").textContent = `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+
+function startTimer() {
+  clearInterval(timerInterval);
+
+  timerInterval = setInterval(() => {
+    if (seconds > 0) {
+      seconds--;
+      updateTimerDisplay();
+    } else {
+      clearInterval(timerInterval);
+
+      if ("vibrate" in navigator) {
+        navigator.vibrate([180, 80, 180]);
+      }
+    }
+  }, 1000);
+}
+
+function pauseTimer() {
+  clearInterval(timerInterval);
+}
+
+renderTabs();
+renderDay();
+updateTimerDisplay();
